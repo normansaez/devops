@@ -15,15 +15,11 @@ def get_stars(repo_user, repo_name, token=None):
     
     # Check if 200 is successful 
     if response.status_code == 200:
-        # get the response
         stars = response.json()
-        # Print informaion 
-#        print(f'Stars Repo: {repo_user}/{repo_name}:')
         count = 0
         for estrella in stars:
-#            print(f'- {estrella["login"]}')
             count += 1
-#        print(stars)
+        #save full information (just in case)
         with open('fullyaml.yaml', 'w') as archivo:
             yaml.dump(stars, archivo, default_flow_style=False)
         format_url = [url,count]
