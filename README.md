@@ -14,4 +14,6 @@ To run the files, use the following Docker command:
 ```bash 
 docker-compose up 
 ```
+For run test.
 
+The program is possible to check the repo and as standlone and in runner on CI/CD
