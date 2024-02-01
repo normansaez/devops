@@ -22,5 +22,4 @@ jobs:
         repository: ${{ github.repository }}
         tag_with_name: true
         tag_with_sha: true
-        tags: ${{ $github.sha }}
 
