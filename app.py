@@ -32,7 +32,7 @@ def get_stars(repo_user, repo_name, token=None):
     else:
         # Print a message if the response was not correct (not 200)
         print(f'Error to obtain star from {repo_user}/{repo_name}. status {response.status_code}')
-
+    return count
 ####################################################################################################
 github_user = 'normansaez'
 repos_name = 'asyncio'
@@ -41,4 +41,3 @@ github_user = 'beekeeper-studio'
 repos_name = 'beekeeper-studio'
 
 get_stars(github_user,repos_name)
-print('new test')
