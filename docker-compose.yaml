@@ -1,0 +1,12 @@
+# docker-compose.yml
+
+version: '3'
+services:
+  mi_proyecto_test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    command: pytest
+
