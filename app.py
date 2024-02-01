@@ -19,11 +19,16 @@ def get_stars(repo_user, repo_name, token=None):
         stars = response.json()
         # Print informaion 
 #        print(f'Stars Repo: {repo_user}/{repo_name}:')
-#        for estrella in stars:
+        count = 0
+        for estrella in stars:
 #            print(f'- {estrella["login"]}')
-        print(stars)
+            count += 1
+#        print(stars)
         with open('fullyaml.yaml', 'w') as archivo:
             yaml.dump(stars, archivo, default_flow_style=False)
+        format_url = [url,count]
+        number_stars = yaml.dump(format_url,default_flow_style=False)
+        print(number_stars)
     else:
         # Print a message if the response was not correct (not 200)
         print(f'Error to obtain star from {repo_user}/{repo_name}. status {response.status_code}')
@@ -36,3 +41,4 @@ github_user = 'beekeeper-studio'
 repos_name = 'beekeeper-studio'
 
 get_stars(github_user,repos_name)
+print('new test')
