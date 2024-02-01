@@ -20,6 +20,4 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: ${{ github.repository }}
-        tag_with_name: true
-        tag_with_sha: true
 
