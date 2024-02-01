@@ -30,10 +30,11 @@ def get_stars(repo_user, repo_name, token=None):
         print(f'Error to obtain star from {repo_user}/{repo_name}. status {response.status_code}')
     return count
 ####################################################################################################
-github_user = 'normansaez'
-repos_name = 'asyncio'
+if __name__ == '__main__':
 
-github_user = 'beekeeper-studio'
-repos_name = 'beekeeper-studio'
-
-get_stars(github_user,repos_name)
+    github_user = 'normansaez'
+    repos_name = 'asyncio'
+    
+    github_user = 'beekeeper-studio'
+    repos_name = 'beekeeper-studio'
+    get_stars(github_user,repos_name)
